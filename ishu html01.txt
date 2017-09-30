@@ -1,0 +1,84 @@
+<html>
+<body>
+div {
+		width: 350px;
+		margin: 50px auto;
+	}
+
+	.container {
+		width: 300px;
+		height: 300px;
+		margin: 60px auto;
+		-webkit-perspective: 1100px;
+		-webkit-perspective-origin: -50% -50%;
+		float: left;
+	}
+
+		.cube {
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: translateZ(-150px);
+			left: 15%;
+			position: relative;
+			margin: 0;
+			width: 300px;
+			height: 300px;
+			-webkit-transition: 1s;
+		}
+
+			.cube div {
+				width: 298px;
+				height: 188px;
+				position: absolute;
+				border: 1px solid #000fff;
+				text-align: center;
+				padding-top: 110px;
+			}
+
+				.front {
+					-webkit-transform: translateZ(150px);
+				}
+
+				.left {
+					-webkit-transform: rotateY(-90deg) translateZ(150px);
+				}
+
+				.right {
+					-webkit-transform: rotateY(90deg) translateZ(150px);
+				}
+
+				.top {
+					-webkit-transform: rotateX(90deg) translateZ(150px);
+				}
+
+				.bottom {
+					-webkit-transform: rotateX(-90deg) translateZ(150px);
+				}
+
+				.back {
+					-webkit-transform: rotateY(180deg) translateZ(150px);
+				}
+				input[value="front"]{
+					-webkit-transform: translateZ(-150px) rotateY(0);
+				}
+
+				input[value="left"]{
+					-webkit-transform: translateZ(-150px) rotateY(90deg);
+				}
+
+				input[value="right"]{
+					-webkit-transform: translateZ(-150px) rotateY(-90deg);
+				}
+
+				input[value="top"]{
+					-webkit-transform: translateZ(-150px) rotateX(-90deg);
+				}
+
+				input[value="bottom"]{
+					-webkit-transform: translateZ(-150px) rotateX(90deg);
+				}
+
+				input[value="back"]{
+					-webkit-transform: translateZ(-150px) rotateY(180deg);
+				}
+</body>
+</html>
